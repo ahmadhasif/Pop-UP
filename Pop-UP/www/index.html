@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.css" />
+        <title>Pop-UP</title>
+    </head>
+    <body>
+
+        <!-- initial page -->
+        <div data-role="page" id="init-page" style="background-color:white">
+
+            <div data-role="header">
+                <!--<a href="#list-page" class="ui-btn ui-btn-right ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext">Back</a>-->
+            </div>
+
+            <div role="main">
+                <!-- container for logo of the app -->
+                <div class="container" style="text-align:center; vertical-align:middle; margin-top:50px">
+                    <img src="images/logo-popup.png" style="width:200px; height:200px"/>
+                </div>
+
+                <!-- container for the function of the app -->
+                <div class="container" style="text-align:center; margin-top:50px">
+                    <form>
+                        <div>
+                            <select name="select-native-1" id="select-native-1" data-mini="true">
+                                <option>Newest</option>
+                                <optgroup label="Melaka">
+                                    <option>Melaka</option>
+                                </optgroup>
+                                <optgroup label="Johor">
+                                    <option>Skudai</option>
+                                    <option>Johor Jaya</option>
+                                </optgroup>
+                                <optgroup label="Pahang">
+                                    <option>Kuantan</option>
+                                </optgroup>
+                                <optgroup label="Selangor">
+                                    <option>Petaling Jaya</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" style="margin-top:50px">
+                            <input name="stall" id="stall" type="checkbox">
+                            <label for="stall">Stall</label>
+                            <input name="space" id="space" type="checkbox">
+                            <label for="space">Space</label>
+                            <input name="special" id="special" type="checkbox">
+                            <label for="special">Special</label>
+                        </fieldset>
+
+                    </form>
+                </div>           
+                                
+            </div>
+
+            
+
+            <div id="search-footer" data-role="footer" data-position="fixed" style="height:50px; vertical-align:middle; text-align:center">
+                <a href="#list-page" id="search-page-btn" style="width:100%; height:100%; margin-top:0px; background-color:#eb008b; color:#fff; text-shadow: 0 1px 0 #333">SEARCH</a>
+            </div>
+        </div>
+
+        <!-- listing page -->
+        <div data-role="page" id="list-page">
+            <div data-role="header">
+                <div class="container" style="text-align:center">
+                    <img src="images/logo-popup.png" style="height:50px; width:50px" />                    
+                </div>                  
+            </div>
+
+            <div data-role="main">
+                <!-- navigation page -->
+                <div class="container" style="padding-left:0px; padding-right:0px; text-align:center">
+                    <form>
+                        <div class="ui-field-contain">
+                            <select name="select-native-1" id="select-1" data-mini="true">
+                                <option value="">Newest</option>
+                                <optgroup label="Melaka">
+                                    <option value="Melaka">Melaka</option>
+                                </optgroup>
+                                <optgroup label="Johor">
+                                    <option value="Skudai">Skudai</option>
+                                    <option value="Johor Jaya">Johor Jaya</option>
+                                </optgroup>
+                                <optgroup label="Pahang">
+                                    <option value="Kuantan">Kuantan</option>
+                                </optgroup>
+                                <optgroup label="Selangor">
+                                    <option value="petaling jaya">Petaling Jaya</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                            <input name="stall" id="stall" type="checkbox">
+                            <label for="stall">Stall</label>
+                            <input name="space" id="space" type="checkbox">
+                            <label for="space">Space</label>
+                            <input name="special" id="special" type="checkbox">
+                            <label for="special">Special</label>
+                        </fieldset>
+
+                    </form>
+                </div>
+                
+                                
+                <!-- list content -->
+                <div class="container" style="padding-left:0px; padding-right:0px">
+
+                    <ul data-role="listview" data-inset="true" id="flist" data-filter="true" data-input="#select-1" style="margin:5px; border:none">
+                        <li class="demo">
+                            <a href="#info-page" style="height:200px; background-color:white">
+                                <div id="property-img" style="margin-left: -20px; margin-top: -15px; width: 360px; height:150px; overflow:hidden">
+                                    <img src="http://purple.com.my/popup/timesquare.jpg" style="width:100%; height:100%" />
+                                </div>
+                                <div id="property-info" style="margin-left: -15px; height: 50px; width: 360px">
+                                    <img src="images/icon-popup-2.png" style="width:50px; height:50px; margin-top:-20px" />
+                                    <h2 style="padding-left:50px; margin-top:-25px;">Test (Property Tittle)</h2>
+                                    <p style="padding-left:50px; margin-top:-5px">Test (Property Location)</p>
+                                    <p style="margin-top:-25px; margin-left:230px">Test (Property price)</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="demo">
+                            <a href="#info-page" style="height:200px; background-color:white">
+                                <div class="property-img" style="margin-left: -20px; margin-top: -15px; width: 360px; height:150px; overflow:hidden">
+                                    <img src="http://purple.com.my/popup/timesquare.jpg" style="width:100%; height:100%" />
+                                </div>
+                                <div class="property-info" style="margin-left: -15px; height: 50px; width: 360px">
+                                    <img src="images/app-ic-1.png" style="width:50px; height:50px; margin-top:-20px" />
+                                    <h2 style="padding-left:50px; margin-top:-25px;">Test (Property Tittle)</h2>
+                                    <p style="padding-left:50px; margin-top:-5px">Test (Property Location)</p>
+                                    <p style="margin-top:-25px; margin-left:230px">Test (Property price)</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>                
+
+                
+            </div>
+
+        </div>
+
+
+        <!-- property page -->
+        <div data-role="page" id="info-page">
+            <div data-role="header">
+                <h1 id="title-content"><strong>OASIS Boulevard</strong></h1>
+                <a data-rel="back" class="ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext" style="border-color:#fff">Back</a>
+            </div>
+
+            <div data-role="main">
+
+                <!-- image container -->
+                <div class="container" id="img-property-slider" style="margin-top:10px; padding-left:0px; padding-right:0px">
+                    <div class="carousel slide article-slide img-property-slider" id="article-photo-carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner cont-slider" id="img-slider" style="height:200px; overflow:hidden">
+                            <div class="item active">
+                                <img alt="" title="" src="http://www.pop-up.my/item/901003-1-28-B.jpg">
+                            </div>
+                            <div class="item">
+                                <img alt="" title="" src="http://www.pop-up.my/item/901003-1-29-B.jpg">
+                            </div>
+                        </div>
+
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li class="active" data-slide-to="0" data-target="#article-photo-carousel"></li>
+                            <li class="" data-slide-to="1" data-target="#article-photo-carousel"></li>
+                        </ol>
+                    </div>                     
+                    
+                </div>
+
+                <!-- info container -->
+                <div class="container" style="margin-top:20px">
+                    <div class="panel panel-default">
+                        <div class="panel-body" id="main-content">
+                            <h4>Open Space - OASIS Boulevard Area</h4>
+                            <p>Oasis Damansara, PJU 1A, Petaling Jaya, 47301 Selangor,Malaysia.</p>
+                            <p>RM 200 / day</p>
+                            <p>Showroom / Event</p>
+                            <a href="#detailed-page" style="float:right" id="detailed-info">More info</a>
+                        </div>
+                    </div>
+                </div>                              
+            </div>
+
+            <div data-role="footer" style="border-color:#f9f9f9">
+                <a href="#req-form" id="request-main-btn" style="width:100%; height:100%; margin-top:0px; background-color:#eb008b; color:#fff; text-shadow: 0 1px 0 #eb008b">REQUEST</a>
+            </div>
+            
+        </div>
+
+        <!-- property detailed page -->
+        <div data-role="page" id="detailed-page">
+            <div data-role="header" data-position="fixed" style="font-size:16px">
+                <h2>More Info</h2>
+                <a data-rel="back" class="ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext" style="border-color:#fff">Back</a>
+                <a href="#req-form" id="request-info-btn" class="ui-btn" style="font-size:11px; background-color:#eb008b; color:#fff; text-shadow: 0 1px 0 #eb008b; border-radius:4px">Request</a>
+            </div>
+
+            <div data-role="main">
+
+                <!-- maps container -->
+                <!--<div class="container" style="margin-top:10px">
+                    <div class="panel panel-default">
+                        <div class="panel-body" style="color:#ccc">
+                            <h2>COMING SOON...</h2>
+                        </div>
+                    </div>
+                </div>-->
+
+                <!-- detailed container -->
+                <div class="container">
+                    <!--<div class="panel panel-default">
+                        <div class="panel-body">
+                            <h2>Description</h2>
+                            <p>2001 Fender American Strat with Texas Special pickups and a Seymour Duncan Pearly Gates humbucker at the bridge. Good used condition, a couple of small marks here and there. Comes with a (non-Fender) hard case. Perfect if you want something a bit special for that upcoming gig/practice/bedroom jam. I've owned it since 2005. Renter to collect and return please, deposit and payment in cash up front. RM100 for a day.</p>
+                            <ul>
+                                <li>Integrated 1400 Watt Amplifier (Peak Power - 4400 Watts)</li>
+                                <li>2-inch Woofer with 3-inch Voicecoil</li>
+                                <li>85 x 50 Horn with Thermal and Peak Protection</li>
+                                <li>38mm Compression Driver with 1-inch Exit</li>
+                                <li>Max SPL 133dB Peak (128dB Continuous)</li>
+                                <li>High Efficiency Bi-Amplified Class-D Power Amplifier</li>
+                            </ul>
+                        </div>
+                    </div>-->
+
+                    <div class="panel panel-default" style="margin-top:10px">
+                        <div class="panel-heading"><strong>Details</strong></div>
+                        <div class="panel-body" id="detailed-panel">
+
+                            <p><strong>Type</strong></p>
+                            <ul>
+                                <li>Apartment / Loft, Boutique / Shop, Shared Space, Restaurant / Bar / Cafe</li>
+                            </ul>
+                            <p><strong>Rental Capacity</strong></p>
+                            <ul>
+                                <li>Entire or Partial</li>
+                            </ul>
+                            <p><strong>Ideal for</strong></p>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <p><strong>Size</strong></p>
+                            <ul>
+                                <li>1,300 sq ft</li>
+                            </ul>
+                            <p><strong>Minimun Rental</strong></p>
+                            <ul>
+                                <li>1 day</li>
+                            </ul>
+                            <p><strong>Pricing</strong></p>
+                            <ul>
+                                <li>RM 300.00 / day</li>
+                                <li>RM 2,000 / week</li>
+                                <li>Weekly price upon request</li>
+                                <li>Monthly price upon request</li>
+                            </ul>
+                            <p><strong>Features</strong></p>
+                            <ul>
+                                <li>Air Conditioning</li>
+                                <li>Kitchen</li>
+                                <li>Counters</li>
+                                <li>Fitting Rooms</li>
+                                <li>Garment Rack</li>
+                                <li>Fan</li>
+                                <li>Furniture</li>
+                                <li>Window Display</li>
+                            </ul>
+
+                        </div>                        
+                    </div>
+
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Other Information</div>
+                        <div class="panel-body" id="other-panel">                            
+                           <p><strong>Other information head or title</strong></p>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- inquriy form page -->
+        <div data-role="page" id="req-form" style="background-color:#fff">
+            <div data-role="header">
+                <h2><strong>Enquiry</strong></h2>
+                <a data-rel="back" class="ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext" style="border-color:#fff">Back</a>
+            </div>
+
+            <div data-role="main">
+
+                <!-- info of request place-->
+                <div class="container" style="margin-top:50px; margin-bottom:50px">
+                    <div class="media" id="info-request">
+                        <div class="media-left">
+                            <img src="images/logo-popup.png" class="img-rounded" width="80" height="80" />
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Request place (with id)</h4>
+                            <p>Address and <br />price</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- date of request -->
+                <div class="container">
+                    <label>Date:</label>
+                    <div class='col-xs-12 col-md-6'>
+                        <div class="form-group">
+                            <div class='input-group date'>
+                                <input id='datetimepicker6' type='text' class="form-control" placeholder="From" />                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-xs-12 col-md-6'>
+                        <div class="form-group">
+                            <div class='input-group date'>
+                                <input id='datetimepicker7' type='text' class="form-control" placeholder="To..." />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- form of request -->
+                <div class="container">                    
+                    <form>
+                        <div class="form-group">
+                            <label for="client-name">Name:</label>
+                            <input type="text" class="form-control" id="client-name" placeholder="Enter your name here..." />
+                        </div>
+                        <div class="form-group">
+                            <label for="company-name">Company:</label>
+                            <input type="text" class="form-control" id="company-name" placeholder="Enter your company name here..." />
+                        </div>
+                        <div class="form-group">
+                            <label for="business-type">Business Type:</label>                            
+                                <select class="form-control">
+                                    <option>Type of business</option>
+                                    <option>Telecommunication</option>
+                                    <option>Insurance</option>
+                                    <option>Bank / Credit Card</option>
+                                    <option>FMCG</option>
+                                    <option>Foods & Beverage</option>
+                                    <option>Car/Automotive</option>
+                                    <option>Education/College</option>
+                                    <option>Property Developer</option>
+                                    <option>Hotel</option>
+                                    <option>Non-profit Organisation</option>
+                                    <option>Small Business</option>
+                                    <option>Fashions / Jewellery</option>
+                                    <option>Craft / Handmade</option>
+                                    <option>Apparels/Shoes/Bags</option>
+                                    <option>Homemade Business</option>
+                                </select>                      
+                        </div>
+                        <div class="form-group">
+                            <label for="job-title">Job Title</label>
+                            <input type="text" class="form-control" id="job-title" placeholder="Enter your job title here..." />
+                        </div>
+                        <div class="form-group">
+                            <label for="client-tel">Phone(h):</label>
+                            <input type="tel" class="form-control" id="client-tel" placeholder="Enter your phone number here..." />
+                        </div>
+                        <div class="form-group">
+                            <label for="client-email">Email:</label>
+                            <input type="email" class="form-control" id="client-email" placeholder="Enter your email here..." />
+                        </div>                        
+                    </form>
+                </div>
+            </div>
+
+            <div data-role="footer">
+                <a href="#req-form" id="search-page-btn" style="width:100%; height:100%; margin-top:0px; background-color:#eb008b; color:#fff; text-shadow: 0 1px 0 #333">SEND</a>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script type="text/javascript" src="scripts/jquery-2.0.0.min.js"></script>
+        <script type="text/javascript" src="scripts/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="scripts/moment.min.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap-datetimepicker.min.js"></script>
+
+        <script type="text/javascript" src="scripts/index.js"></script>
+        <script type="text/javascript" src="scripts/app.js"></script>
+        <script type="text/javascript" src="scripts/xmlScript.js"></script>
+    </body>
+</html>
