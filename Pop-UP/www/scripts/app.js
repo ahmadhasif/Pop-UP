@@ -170,8 +170,11 @@ function showDetail(id, img1, img2, img3, img4, img5, img6, img7, img8, img9, im
 
     $("#detailed-info").click(function () {
         console.log("detailed-info-clicked");
+        var contM = document.getElementById("map-container");
         var contD = document.getElementById("detailed-panel");
         var contO = document.getElementById("other-panel");
+
+        contM.innerHTML = '<iframe width="100%" height="250" frameborder="0" style="border:0" src="'+ map +'" allowfullscreen></iframe>'
         contD.innerHTML = '<p><strong>Type</strong></p>'
                             + '<ul>'
                                + '<li>' + type + '</li>'
