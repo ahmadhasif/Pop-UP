@@ -189,15 +189,15 @@ function showPopulate(properties) {
 
         $content.append('<li class="demo ui-first-child ui-last-child" style="margin-top:10px; margin-bottom:10px; box-shadow:5px 5px 5px #888888">' +
                         '<a href="#info-page" class="ui-btn" style="height:200px; background-color:white; border-color:#ddd">' +
-                            '<div id="property-img" style="margin-left: -20px; margin-top: -20px; width: 360px; height:150px; overflow:hidden">' +
+                            '<div class="property-img" style="margin-left: -20px; margin-top: -20px; width: 360px; height:150px; overflow:hidden">' +
                                 '<img src="' + obj.property[l].img1 + '" style="width:100%; height:100%"/>' +
                             '</div>' +
-                            '<div id="property-info" class="container" style="margin-left: -15px; height: 50px; width: 330px; color:black">' +
-                                '<img src="' + pIcon + '" style="width:50px; height:50px; margin-top:-20px" />' +
-                                '<h2 style="padding-left:50px; margin-top:-25px;">' + obj.property[l].name + '</h2>' +
-                                '<p style="padding-left:50px; margin-top:-5px">' + obj.property[l].location + ', ' + obj.property[l].region + '</p>' +
-                                '<p href="" class="ui-btn" style="margin-top:-40px; margin-left:235px; height:20px; width:90px; font-size:9px; color: #fff; background-color: #29cedc; border-color: #ddd; text-shadow: 0 1px 0 #29cedc; border-radius: 4px;">RM ' + obj.property[l].day + ' / day</p>' +
-                                '<p href="" class="ui-btn" style="margin-top:0px; margin-left:235px; height:20px; width:90px; font-size:9px; color: #fff; background-color: #17a548; border-color: #ddd; text-shadow: 0 1px 0 #17a548; border-radius: 4px;">RM ' + obj.property[l].week + ' / week</p>' +
+                            '<div class="container property-info" style="margin-left:-33px; height: 50px; width: 330px; color:black">' +
+                                '<img src="' + pIcon + '" style="width:40px;" />' +
+                                '<h2 style="padding-left:40px; margin-top:-33px;">' + obj.property[l].name + '</h2>' +
+                                '<p style="padding-left:40px; margin-top:-5px">' + obj.property[l].location + ', ' + obj.property[l].region + '</p>' +
+                                '<p href="" class="ui-btn" style="margin-top:-40px; margin-left:215px; height:20px; width:80px; font-size:9px; color: #fff; background-color: #29cedc; border-color: #ddd; text-shadow: 0 1px 0 #29cedc; border-radius: 4px;">RM ' + obj.property[l].day + ' / day</p>' +
+                                '<p href="" class="ui-btn" style="margin-top:0px; margin-left:208px; height:20px; width:86px; font-size:9px; color: #fff; background-color: #17a548; border-color: #ddd; text-shadow: 0 1px 0 #17a548; border-radius: 4px;">RM ' + obj.property[l].week + ' / week</p>' +
                             '</div>' +
                         '</a>' +
                     '</li>');

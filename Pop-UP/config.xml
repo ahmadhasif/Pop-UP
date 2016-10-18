@@ -4,7 +4,7 @@
   <description>Pop-UP mobile application version(alpha)</description>
   <author href="http://cordova.io" email="dev@cordova.apache.org">Hasif Tarmizi</author>
   <content src="index.html" />
-  <access origin="http://purple.com.my/popup/popup.xml" />
+  <access origin="*" />
   <vs:features />
   <preference name="SplashScreen" value="screen" />
   <preference name="windows-target-version" value="8.1" />

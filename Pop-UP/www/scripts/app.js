@@ -1,5 +1,7 @@
 ﻿function datePicker() {
 
+    //bootstrap date time piceker v3
+
     console.log("date-picker function trigger");
 
     $('#datetimepicker6').datetimepicker({
@@ -7,7 +9,7 @@
         format: 'ddd, DD MMM YY'       
     });
     $('#datetimepicker7').datetimepicker({
-        useCurrent: false, //Important! See issue #1075
+        useCurrent: false, 
         format: 'ddd, DD MMM YY'        
     });
     
@@ -28,6 +30,7 @@ function apps() {
 
     $("#search-page-btn").click(function () {
         loadXml();
+        document.addEventListener('backbutton', onBackKeyDown, false);
         //$("#init-page").remove();
     })
 }

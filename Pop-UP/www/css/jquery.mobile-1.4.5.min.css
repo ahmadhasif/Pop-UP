@@ -3122,7 +3122,7 @@ fieldset.ui-controlgroup {
 .ui-controlgroup-horizontal .ui-controlgroup-controls .ui-checkbox,
 .ui-controlgroup-horizontal .ui-controlgroup-controls .ui-radio,
 .ui-controlgroup-horizontal .ui-controlgroup-controls .ui-select {
-    padding:10px;
+    padding:5px;
     float: left;
     clear: none
 }
