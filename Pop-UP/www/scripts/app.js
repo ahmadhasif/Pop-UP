@@ -28,6 +28,7 @@ function apps() {
 
     $("#search-page-btn").click(function () {
         loadXml();
+        //$("#init-page").remove();
     })
 }
 

@@ -1,10 +1,10 @@
 {
      "android": {
          "release": {
-             "keystore": "",
-             "storePassword": "",
-             "alias": "",
-             "password" : "",
+             "keystore": "C:\\popup.keystore",
+             "storePassword": "pwd123",
+             "alias": "hasifT",
+             "password" : "pwd123",
              "keystoreType": ""
          }
      }

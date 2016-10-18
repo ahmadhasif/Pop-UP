@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="io.cordova.myapp2afa5c" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US">
+<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="io.cordova.myapp2afa5c" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" android-versionCode="">
   <name>Pop-UP</name>
-  <description>Pop-UP project for iphone and android application</description>
-  <author href="http://cordova.io" email="dev@cordova.apache.org">Hasif Tarmizizi</author>
+  <description>Pop-UP mobile application version(alpha)</description>
+  <author href="http://cordova.io" email="dev@cordova.apache.org">Hasif Tarmizi</author>
   <content src="index.html" />
-  <access origin="*" />
+  <access origin="http://purple.com.my/popup/popup.xml" />
   <vs:features />
   <preference name="SplashScreen" value="screen" />
   <preference name="windows-target-version" value="8.1" />

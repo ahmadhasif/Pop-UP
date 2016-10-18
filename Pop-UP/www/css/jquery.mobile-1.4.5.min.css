@@ -957,7 +957,7 @@ html .ui-body-a .ui-btn:visited,
 html body .ui-group-theme-a .ui-btn:visited,
 html head+body .ui-btn.ui-btn-a:visited {
     background-color: #ffffff;
-    border-color: #eb008b;
+    border-color: #ec008c;
     color: #1e1e1e;
     text-shadow: 0 1px 0 #f3f3f3
 }
@@ -1003,7 +1003,7 @@ html body .ui-group-theme-a .ui-slider-track .ui-btn-active,
 html body div.ui-slider-track.ui-body-a .ui-btn-active {
     background-color: #38c;
     border-color: #38c;
-    color: #fff;
+    color: rgba(0, 0, 0, .6);
     text-shadow: 0 1px 0 #059
 }
 .ui-page-theme-a .ui-radio-on:after,
@@ -3122,6 +3122,7 @@ fieldset.ui-controlgroup {
 .ui-controlgroup-horizontal .ui-controlgroup-controls .ui-checkbox,
 .ui-controlgroup-horizontal .ui-controlgroup-controls .ui-radio,
 .ui-controlgroup-horizontal .ui-controlgroup-controls .ui-select {
+    padding:10px;
     float: left;
     clear: none
 }
