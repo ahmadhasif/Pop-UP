@@ -11,12 +11,17 @@
         // Handle the Cordova pause and resume events
         document.addEventListener( 'pause', onPause.bind( this ), false );
         document.addEventListener('resume', onResume.bind(this), false);
+        //cordova.plugins.email.isAvailable(
+        //    urischeme, function (isAvailable, withScheme) {
+        //        // alert('Service is not available') unless isAvailable;
+        //    });
         
         
         
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
         datePicker();
         apps();
+        //window.plugins.toast.show('This application is still in development state, use with cautious', 'short', 'center', function (a) { console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b) });
         
     };
 

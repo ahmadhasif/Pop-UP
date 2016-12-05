@@ -82,13 +82,15 @@ function detail(jArr) {
         fsx = obj.property[index].fsx;
         fsv = obj.property[index].fsv;
         fei = obj.property[index].fei;
-        fnn = obj.property[index].ffn;
+        fnn = obj.property[index].fnn;
         ftn = obj.property[index].ftn;
         desc = obj.property[index].desc;
         p1 = obj.property[index].p1;
         p2 = obj.property[index].p2;
         p3 = obj.property[index].p3;
         map = obj.property[index].map;
+
+        $('#clear-content').remove();
 
         showDetail(id, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, name, location, region, state, type, capacity, idf, ids, idt, size, min, day, week,
             reqW, reqM, fon, ftw, fth, ffr, ffv, fsx, fsv, fei, fnn, ftn, desc, p1, p2, p3, map);
@@ -101,34 +103,337 @@ function showDetail(id, img1, img2, img3, img4, img5, img6, img7, img8, img9, im
 
 
     /* property image */
-    //var imgText = "";
-    //if (img3 == "unset") {
-    var imgText = '<div class="carousel slide article-slide" id="article-photo-carousel">'
-                        + ' <!-- Wrapper for slides -->'
-                        + '<div class="carousel-inner cont-slider" id="img-slider" style="height:200px; overflow:hidden">'
-                            + '<div class="item active">'
-                                + '<img alt="" title="" src="' + img1 + '">'
-                            + '</div>'
-                            + '<div class="item">'
-                                + '<img alt="" title="" src="' + img2 + '">'
-                            + '</div>'
-                        + '</div>'
+    var imgTxt = "";
 
-                        + '<!-- Indicators -->'
-                        + '<ol class="carousel-indicators">'
-                            + '<li class="active" data-slide-to="0" data-target="#article-photo-carousel"></li>'
-                            + '<li class="" data-slide-to="1" data-target="#article-photo-carousel"></li>'
-                        + '</ol>';
-    //}
+    if (img3 != "unset") {
+        if (img4 != "unset") {
+            if (img5 != "unset") {
+                if (img6 != "unset") {
+                    if (img7 != "unset") {
+                        if (img8 != "unset") {
+                            if (img9 != "unset") {
+                                if (img10 != "unset") {
+                                    imgTxt = '<div class="carousel slide article-slide" id="article-photo-carousel">'
+                                        + ' <!-- Wrapper for slides -->'
+                                        + '<div class="carousel-inner cont-slider" id="img-slider" style="height:200px; overflow:hidden">'
+                                            + '<div class="item active">'
+                                                + '<img alt="" title="" src="' + img1 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img2 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img3 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img4 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img5 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img6 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img7 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img8 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img9 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img10 + '">'
+                                            + '</div>'
+                                        + '</div>'
 
-    //if (img5 == "unset") {
-    //    imgText = ' <!-- Wrapper for slides -->'
+                                        + '<!-- Indicators -->'
+                                        + '<ol class="carousel-indicators">'
+                                            + '<li class="active" data-slide-to="0" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="1" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="2" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="3" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="4" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="5" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="6" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="7" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="8" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="9" data-target="#article-photo-carousel"></li>'
+                                        + '</ol>';
+
+                                } else {
+                                    imgTxt = '<div class="carousel slide article-slide" id="article-photo-carousel">'
+                                        + ' <!-- Wrapper for slides -->'
+                                        + '<div class="carousel-inner cont-slider" id="img-slider" style="height:200px; overflow:hidden">'
+                                            + '<div class="item active">'
+                                                + '<img alt="" title="" src="' + img1 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img2 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img3 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img4 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img5 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img6 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img7 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img8 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img9 + '">'
+                                            + '</div>'
+                                        + '</div>'
+
+                                        + '<!-- Indicators -->'
+                                        + '<ol class="carousel-indicators">'
+                                            + '<li class="active" data-slide-to="0" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="1" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="2" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="3" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="4" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="5" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="6" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="7" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="8" data-target="#article-photo-carousel"></li>'
+                                        + '</ol>';
+                                }
+
+                            } else {
+                                imgTxt = '<div class="carousel slide article-slide" id="article-photo-carousel">'
+                                        + ' <!-- Wrapper for slides -->'
+                                        + '<div class="carousel-inner cont-slider" id="img-slider" style="height:200px; overflow:hidden">'
+                                            + '<div class="item active">'
+                                                + '<img alt="" title="" src="' + img1 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img2 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img3 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img4 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img5 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img6 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img7 + '">'
+                                            + '</div>'
+                                            + '<div class="item">'
+                                                + '<img alt="" title="" src="' + img8 + '">'
+                                            + '</div>'
+                                        + '</div>'
+
+                                        + '<!-- Indicators -->'
+                                        + '<ol class="carousel-indicators">'
+                                            + '<li class="active" data-slide-to="0" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="1" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="2" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="3" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="4" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="5" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="6" data-target="#article-photo-carousel"></li>'
+                                            + '<li class="" data-slide-to="7" data-target="#article-photo-carousel"></li>'
+                                        + '</ol>';
+                            }
+
+                        } else {
+                            imgTxt = '<div class="carousel slide article-slide" id="article-photo-carousel">'
+                                    + ' <!-- Wrapper for slides -->'
+                                    + '<div class="carousel-inner cont-slider" id="img-slider" style="height:200px; overflow:hidden">'
+                                        + '<div class="item active">'
+                                            + '<img alt="" title="" src="' + img1 + '">'
+                                        + '</div>'
+                                        + '<div class="item">'
+                                            + '<img alt="" title="" src="' + img2 + '">'
+                                        + '</div>'
+                                        + '<div class="item">'
+                                            + '<img alt="" title="" src="' + img3 + '">'
+                                        + '</div>'
+                                        + '<div class="item">'
+                                            + '<img alt="" title="" src="' + img4 + '">'
+                                        + '</div>'
+                                        + '<div class="item">'
+                                            + '<img alt="" title="" src="' + img5 + '">'
+                                        + '</div>'
+                                        + '<div class="item">'
+                                            + '<img alt="" title="" src="' + img6 + '">'
+                                        + '</div>'
+                                        + '<div class="item">'
+                                            + '<img alt="" title="" src="' + img7 + '">'
+                                        + '</div>'
+                                    + '</div>'
+
+                                    + '<!-- Indicators -->'
+                                    + '<ol class="carousel-indicators">'
+                                        + '<li class="active" data-slide-to="0" data-target="#article-photo-carousel"></li>'
+                                        + '<li class="" data-slide-to="1" data-target="#article-photo-carousel"></li>'
+                                        + '<li class="" data-slide-to="2" data-target="#article-photo-carousel"></li>'
+                                        + '<li class="" data-slide-to="3" data-target="#article-photo-carousel"></li>'
+                                        + '<li class="" data-slide-to="4" data-target="#article-photo-carousel"></li>'
+                                        + '<li class="" data-slide-to="5" data-target="#article-photo-carousel"></li>'
+                                        + '<li class="" data-slide-to="6" data-target="#article-photo-carousel"></li>'
+                                    + '</ol>';
+                        }
+
+                    } else {
+                        imgTxt = '<div class="carousel slide article-slide" id="article-photo-carousel">'
+                            + ' <!-- Wrapper for slides -->'
+                            + '<div class="carousel-inner cont-slider" id="img-slider" style="height:200px; overflow:hidden">'
+                                + '<div class="item active">'
+                                    + '<img alt="" title="" src="' + img1 + '">'
+                                + '</div>'
+                                + '<div class="item">'
+                                    + '<img alt="" title="" src="' + img2 + '">'
+                                + '</div>'
+                                + '<div class="item">'
+                                    + '<img alt="" title="" src="' + img3 + '">'
+                                + '</div>'
+                                + '<div class="item">'
+                                    + '<img alt="" title="" src="' + img4 + '">'
+                                + '</div>'
+                                + '<div class="item">'
+                                    + '<img alt="" title="" src="' + img5 + '">'
+                                + '</div>'
+                                + '<div class="item">'
+                                    + '<img alt="" title="" src="' + img6 + '">'
+                                + '</div>'
+                            + '</div>'
+
+                            + '<!-- Indicators -->'
+                            + '<ol class="carousel-indicators">'
+                                + '<li class="active" data-slide-to="0" data-target="#article-photo-carousel"></li>'
+                                + '<li class="" data-slide-to="1" data-target="#article-photo-carousel"></li>'
+                                + '<li class="" data-slide-to="2" data-target="#article-photo-carousel"></li>'
+                                + '<li class="" data-slide-to="3" data-target="#article-photo-carousel"></li>'
+                                + '<li class="" data-slide-to="4" data-target="#article-photo-carousel"></li>'
+                                + '<li class="" data-slide-to="5" data-target="#article-photo-carousel"></li>'
+                            + '</ol>';
+                    }
+
+                } else {
+                    imgTxt = '<div class="carousel slide article-slide" id="article-photo-carousel">'
+                            + ' <!-- Wrapper for slides -->'
+                            + '<div class="carousel-inner cont-slider" id="img-slider" style="height:200px; overflow:hidden">'
+                                + '<div class="item active">'
+                                    + '<img alt="" title="" src="' + img1 + '">'
+                                + '</div>'
+                                + '<div class="item">'
+                                    + '<img alt="" title="" src="' + img2 + '">'
+                                + '</div>'
+                                + '<div class="item">'
+                                    + '<img alt="" title="" src="' + img3 + '">'
+                                + '</div>'
+                                + '<div class="item">'
+                                    + '<img alt="" title="" src="' + img4 + '">'
+                                + '</div>'
+                                + '<div class="item">'
+                                    + '<img alt="" title="" src="' + img5 + '">'
+                                + '</div>'
+                            + '</div>'
+
+                            + '<!-- Indicators -->'
+                            + '<ol class="carousel-indicators">'
+                                + '<li class="active" data-slide-to="0" data-target="#article-photo-carousel"></li>'
+                                + '<li class="" data-slide-to="1" data-target="#article-photo-carousel"></li>'
+                                + '<li class="" data-slide-to="2" data-target="#article-photo-carousel"></li>'
+                                + '<li class="" data-slide-to="3" data-target="#article-photo-carousel"></li>'
+                                + '<li class="" data-slide-to="4" data-target="#article-photo-carousel"></li>'
+                            + '</ol>';
+                }
+
+            } else {
+                imgTxt = '<div class="carousel slide article-slide" id="article-photo-carousel">'
+                            + ' <!-- Wrapper for slides -->'
+                            + '<div class="carousel-inner cont-slider" id="img-slider" style="height:200px; overflow:hidden">'
+                                + '<div class="item active">'
+                                    + '<img alt="" title="" src="' + img1 + '">'
+                                + '</div>'
+                                + '<div class="item">'
+                                    + '<img alt="" title="" src="' + img2 + '">'
+                                + '</div>'
+                                + '<div class="item">'
+                                    + '<img alt="" title="" src="' + img3 + '">'
+                                + '</div>'
+                                + '<div class="item">'
+                                    + '<img alt="" title="" src="' + img4 + '">'
+                                + '</div>'
+                            + '</div>'
+
+                            + '<!-- Indicators -->'
+                            + '<ol class="carousel-indicators">'
+                                + '<li class="active" data-slide-to="0" data-target="#article-photo-carousel"></li>'
+                                + '<li class="" data-slide-to="1" data-target="#article-photo-carousel"></li>'
+                                + '<li class="" data-slide-to="2" data-target="#article-photo-carousel"></li>'
+                                + '<li class="" data-slide-to="3" data-target="#article-photo-carousel"></li>'
+                            + '</ol>';
+            }
+
+        } else {
+            imgTxt = '<div class="carousel slide article-slide" id="article-photo-carousel">'
+                            + ' <!-- Wrapper for slides -->'
+                            + '<div class="carousel-inner cont-slider" id="img-slider" style="height:200px; overflow:hidden">'
+                                + '<div class="item active">'
+                                    + '<img alt="" title="" src="' + img1 + '">'
+                                + '</div>'
+                                + '<div class="item">'
+                                    + '<img alt="" title="" src="' + img2 + '">'
+                                + '</div>'
+                                + '<div class="item">'
+                                    + '<img alt="" title="" src="' + img3 + '">'
+                                + '</div>'
+                            + '</div>'
+
+                            + '<!-- Indicators -->'
+                            + '<ol class="carousel-indicators">'
+                                + '<li class="active" data-slide-to="0" data-target="#article-photo-carousel"></li>'
+                                + '<li class="" data-slide-to="1" data-target="#article-photo-carousel"></li>'
+                                + '<li class="" data-slide-to="2" data-target="#article-photo-carousel"></li>'
+                            + '</ol>';
+        }
+
+    } else {
+        imgTxt = '<div class="carousel slide article-slide" id="article-photo-carousel">'
+                            + ' <!-- Wrapper for slides -->'
+                            + '<div class="carousel-inner cont-slider" id="img-slider" style="height:200px; overflow:hidden">'
+                                + '<div class="item active">'
+                                    + '<img alt="" title="" src="' + img1 + '">'
+                                + '</div>'
+                                + '<div class="item">'
+                                    + '<img alt="" title="" src="' + img2 + '">'
+                                + '</div>'
+                            + '</div>'
+
+                            + '<!-- Indicators -->'
+                            + '<ol class="carousel-indicators">'
+                                + '<li class="active" data-slide-to="0" data-target="#article-photo-carousel"></li>'
+                                + '<li class="" data-slide-to="1" data-target="#article-photo-carousel"></li>'
+                            + '</ol>';
+    }
+    
+    //var imgText = '<div class="carousel slide article-slide" id="article-photo-carousel">'
+    //                    + ' <!-- Wrapper for slides -->'
     //                    + '<div class="carousel-inner cont-slider" id="img-slider" style="height:200px; overflow:hidden">'
     //                        + '<div class="item active">'
-    //                            + '<img alt="" title="" src="http://www.pop-up.my/item/901003-1-28-B.jpg">'
+    //                            + '<img alt="" title="" src="' + img1 + '">'
     //                        + '</div>'
     //                        + '<div class="item">'
-    //                            + '<img alt="" title="" src="http://www.pop-up.my/item/901003-1-29-B.jpg">'
+    //                            + '<img alt="" title="" src="' + img2 + '">'
     //                        + '</div>'
     //                    + '</div>'
 
@@ -137,39 +442,59 @@ function showDetail(id, img1, img2, img3, img4, img5, img6, img7, img8, img9, im
     //                        + '<li class="active" data-slide-to="0" data-target="#article-photo-carousel"></li>'
     //                        + '<li class="" data-slide-to="1" data-target="#article-photo-carousel"></li>'
     //                    + '</ol>';
-    //}
+   
 
-    //if (img7 == "unset") {
-    //    imgText = ' <!-- Wrapper for slides -->'
-    //                    + '<div class="carousel-inner cont-slider" id="img-slider" style="height:200px; overflow:hidden">'
-    //                        + '<div class="item active">'
-    //                            + '<img alt="" title="" src="http://www.pop-up.my/item/901003-1-28-B.jpg">'
-    //                        + '</div>'
-    //                        + '<div class="item">'
-    //                            + '<img alt="" title="" src="http://www.pop-up.my/item/901003-1-29-B.jpg">'
-    //                        + '</div>'
-    //                    + '</div>'
+    $('#main-content').append('<div class="panel panel-default" id="clear-content">'
+                                    + '<div class="panel-heading"><h3>'+ name +'</h3></div>'
+                                    + '<div class="panel-body" style="padding:5px">'
+                                        + '<div class="col-xs-8" style="padding-left:5px; padding-right:5px">'
+                                            + '<p>'+ location + ', '+ region +'</p>'
+                                            + '<strong>Ideal for:</strong>'
+                                            + '<ul style="padding-left:20px">'
+                                                + '<li>'
+                                                    + '' + idf + ''
+                                                    + '<ul>'
+                                                        + '<li>Showroom</li>'
+                                                        + '<li>Ready-to-wear</li>'
+                                                        + '<li>Accessories</li>'
+                                                        + '<li>other</li>'
+                                                    + '</ul>'
+                                                + '</li>'                                    
+                                                + '<li>'
+                                                    + '' + ids + ''
+                                                    + '<ul>'
+                                                        + '<li>Exhibition</li>'
+                                                        + '<li>Late nite event</li>'
+                                                        + '<li>Private dinner</li>'
+                                                    + '</ul>'
+                                                + '</li>'
+                                            + '</ul>'
+                                        + '</div>'
+                                        + '<div  class="col-xs-4" style="padding-left:0px; padding-right:0px">'
+                                            + '<p href="" class="dummy" style="background-color:#27f335; color:#fff; text-shadow:0 1px 0 #27f335">RM '+ day +' / day</p>'
+                                            + '<p href="" class="dummy" style="background-color:#24efec; color:#fff; text-shadow:0 1px 0 #24efec">RM '+ week +' / week</p>'
+                                            + '<a href="#detailed-page" id="detailed-info">Full Details</a>'
+                                        + '</div>'
+                                    + '</div>'
+                                + '</div>');
 
-    //                    + '<!-- Indicators -->'
-    //                    + '<ol class="carousel-indicators">'
-    //                        + '<li class="active" data-slide-to="0" data-target="#article-photo-carousel"></li>'
-    //                        + '<li class="" data-slide-to="1" data-target="#article-photo-carousel"></li>'
-    //                    + '</ol>';
-    //}
+
 
 
     document.getElementById("title-content").innerHTML = name; //header
 
-    document.getElementById("img-property-slider").innerHTML = imgText; // img slider
+    document.getElementById("img-property-slider").innerHTML = imgTxt; //imgText; // img slider
 
-    document.getElementById("main-content").innerHTML = '<h4>'+ name +'</h4>'  //main content
-                            + '<p>'+ location +', '+ region +'.</p>'
-                            + '<p>RM '+ day +' / day</p>'
-                            + '<p>'+idf +' / '+ ids +'</p>'
-                            + '<a href="#detailed-page" style="float:right" id="detailed-info">More info</a>';
+    //document.getElementById("main-content").innerHTML = '<h4>'+ name +'</h4>'  //main content
+    //                        + '<p>'+ location +', '+ region +'.</p>'
+    //                        + '<p>RM '+ day +' / day</p>'
+    //                        + '<p>'+idf +' / '+ ids +'</p>'
+    //                        + '<a href="#detailed-page" style="float:right" id="detailed-info">More info</a>';
 
     autoSlider();
-
+    //$("#img-property-slider").click(function () {
+    //    window.plugins.toast.show('Under construction.', 'short', 'bottom', function (a) { console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b) });
+    //})
 
 
     $("#detailed-info").click(function () {
@@ -177,6 +502,105 @@ function showDetail(id, img1, img2, img3, img4, img5, img6, img7, img8, img9, im
         var contM = document.getElementById("map-container");
         var contD = document.getElementById("detailed-panel");
         var contO = document.getElementById("other-panel");
+
+        var ideal = "";
+        if (idf != "unset") {
+            if (ids != "unset") {
+                if (idt != "unset") {
+                    ideal = '<li>' + idf + '</li>' + '<li>' + ids + '</li>' + '<li>' + idt + '</li>';
+                } else {
+                    ideal = '<li>' + idf + '</li>' + '<li>' + ids + '</li>';
+                }
+            } else {
+                ideal = '<li>' + idf + '</li>';
+            }
+        }
+
+        var features = "";
+        if (fon != "unset") {
+            if (ftw != "unset") {
+                if (fth != "unset") {
+                    if (ffr != "unset") {
+                        if (ffv != "unset") {
+                            if (fsx != "unset") {
+                                if (fsv != "unset") {
+                                    if (fei != "unset") {
+                                        if (fnn != "unset") {
+                                            if (ftn != "unset") {
+                                                features = '<li>' + fon + '</li>'
+                                                        + '<li>' + ftw + '</li>'
+                                                        + '<li>' + fth + '</li>'
+                                                        + '<li>' + ffr + '</li>'
+                                                        + '<li>' + ffv + '</li>'
+                                                        + '<li>' + fsx + '</li>'
+                                                        + '<li>' + fsv + '</li>'
+                                                        + '<li>' + fei + '</li>'
+                                                        + '<li>' + fnn + '</li>'
+                                                        + '<li>' + ftn + '</li>';
+                                            } else {
+                                                features = '<li>' + fon + '</li>'
+                                                        + '<li>' + ftw + '</li>'
+                                                        + '<li>' + fth + '</li>'
+                                                        + '<li>' + ffr + '</li>'
+                                                        + '<li>' + ffv + '</li>'
+                                                        + '<li>' + fsx + '</li>'
+                                                        + '<li>' + fsv + '</li>'
+                                                        + '<li>' + fei + '</li>'
+                                                        + '<li>' + fnn + '</li>';
+                                            }
+                                        } else {
+                                            features = '<li>' + fon + '</li>'
+                                                    + '<li>' + ftw + '</li>'
+                                                    + '<li>' + fth + '</li>'
+                                                    + '<li>' + ffr + '</li>'
+                                                    + '<li>' + ffv + '</li>'
+                                                    + '<li>' + fsx + '</li>'
+                                                    + '<li>' + fsv + '</li>'
+                                                    + '<li>' + fei + '</li>';
+                                        }
+                                    } else {
+                                        features = '<li>' + fon + '</li>'
+                                                + '<li>' + ftw + '</li>'
+                                                + '<li>' + fth + '</li>'
+                                                + '<li>' + ffr + '</li>'
+                                                + '<li>' + ffv + '</li>'
+                                                + '<li>' + fsx + '</li>'
+                                                + '<li>' + fsv + '</li>';
+                                    }
+                                } else {
+                                    features = '<li>' + fon + '</li>'
+                                            + '<li>' + ftw + '</li>'
+                                            + '<li>' + fth + '</li>'
+                                            + '<li>' + ffr + '</li>'
+                                            + '<li>' + ffv + '</li>'
+                                            + '<li>' + fsx + '</li>';
+                                }
+                            } else {
+                                features = '<li>' + fon + '</li>'
+                                        + '<li>' + ftw + '</li>'
+                                        + '<li>' + fth + '</li>'
+                                        + '<li>' + ffr + '</li>'
+                                        + '<li>' + ffv + '</li>';
+                            }
+                        } else {
+                            features = '<li>' + fon + '</li>'
+                                    + '<li>' + ftw + '</li>'
+                                    + '<li>' + fth + '</li>'
+                                    + '<li>' + ffr + '</li>';
+                        }
+                    } else {
+                        features = '<li>' + fon + '</li>'
+                                + '<li>' + ftw + '</li>'
+                                + '<li>' + fth + '</li>';
+                    }
+                } else {
+                    features = '<li>' + fon + '</li>' + '<li>' + ftw + '</li>';
+                }
+            } else {
+                features = '<li>' + fon + '</li>';
+            }
+        }
+
 
         contM.innerHTML = '<iframe width="100%" height="250" frameborder="0" style="border:0" src="'+ map +'" allowfullscreen></iframe>'
         contD.innerHTML = '<p><strong>Type</strong></p>'
@@ -189,8 +613,7 @@ function showDetail(id, img1, img2, img3, img4, img5, img6, img7, img8, img9, im
                             + '</ul>'
                             + '<p><strong>Ideal for</strong></p>'
                             + '<ul>'
-                                + '<li> ' + idf + '</li>'
-                                + '<li> ' + ids + '</li>'
+                                + ideal     //filter ideal                                
                             + '</ul>'
                             + '<p><strong>Size</strong></p>'
                             + '<ul>'
@@ -208,20 +631,31 @@ function showDetail(id, img1, img2, img3, img4, img5, img6, img7, img8, img9, im
                                 + '<li>' + reqM + '</li>'
                             + '</ul>'
                             + '<p><strong>Features</strong></p>'
-                            + '<ul>'
-                                + '<li>' + fon + '</li>'
-                                + '<li>' + ftw + '</li>'
-                                + '<li>' + fth + '</li>'
-                                + '<li>' + ffr + '</li>'
-                                + '<li>' + ffv + '</li>'
-                                + '<li>' + fsx+ '</li>'
-                                + '<li>' + fsv+ '</li>'
-                                + '<li>' + fei + '</li>'
+                            + '<ul>' 
+                                + features      //filter features
                             + '</ul>';
-        contO.innerHTML = '<p><strong>Others information</strong></p>'
-                           + '<p>' + p1 + '</p>'
-                           + '<p>' + p2 + '</p>'
-                           + '<p>' + p3 + '</p>';
+
+
+        var otherInfo = "";
+        if (p1 != "unset") {
+            if (p2 != "unset") {
+                if (p3 != "unset") {
+                    otherInfo = '<p>' + p1 + '</p>'
+                            + '<p>' + p2 + '</p>'
+                            + '<p>' + p3 + '</p>';
+                } else {
+                    otherInfo = '<p>' + p1 + '</p>'
+                            + '<p>' + p2 + '</p>';
+                }
+
+            } else {
+                otherInfo = '<p>' + p1 + '</p>';
+            }
+        } else {
+            otherInfo = '<p>No additional info at the moment.</p>'
+        }
+
+        contO.innerHTML = otherInfo ;//filter others information
     })
 
 
@@ -237,6 +671,11 @@ function showDetail(id, img1, img2, img3, img4, img5, img6, img7, img8, img9, im
                             + '<br />RM ' + day + ' / day'
                             + '<br />RM ' + week + ' / week</p>'
                         + '</div>';
+
+        $('#send-page-btn').click(function () {
+            sendEmail();
+        });
+        
     })
 
     $("#request-info-btn").click(function () {
@@ -251,6 +690,10 @@ function showDetail(id, img1, img2, img3, img4, img5, img6, img7, img8, img9, im
                             + '<br />RM ' + day + ' / day'
                             + '<br />RM ' + week + ' / week</p>'
                         + '</div>';
+
+        $('#send-page-btn').click(function () {
+            sendEmail();
+        });
     })
 }
 
@@ -260,4 +703,31 @@ function autoSlider() {
             interval: 3000
         })
     
+}
+
+function sendEmail()
+{
+    console.log('email function excute');
+     $.ajax({
+           url: "mail.php",
+           type: "POST",
+           success: function(response) {
+               if (!response) {
+                    alert("Something went wrong. Please try again");
+                    return;
+               }
+
+               var parsedJSON = eval('('+response+')');
+
+               // If there's an error, display it.
+               if(parsedJSON.Error) {
+                  // Handle session timeout.
+                  if (parsedJSON.Error == "Timeout") {
+                       alert("Session timed out. Please login again.");
+                       window.location.reload();
+                   }
+                }
+               alert("Email Sent successfully");  
+            }
+     });
 }

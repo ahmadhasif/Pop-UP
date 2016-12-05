@@ -2,7 +2,7 @@
 <widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="io.cordova.myapp2afa5c" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" android-versionCode="">
   <name>Pop-UP</name>
   <description>Pop-UP mobile application version(alpha)</description>
-  <author href="http://cordova.io" email="dev@cordova.apache.org">Hasif Tarmizi</author>
+  <author href="http://cordova.io" email="hasif@justsimple.com">Hasif Tarmizi</author>
   <content src="index.html" />
   <access origin="*" />
   <vs:features />
@@ -107,4 +107,6 @@
     <splash src="res/screens/wp8/SplashScreenImage.png" width="768" height="1280" />
   </platform>
   <preference name="Orientation" value="portrait" />
+  <plugin name="cordova-plugin-x-toast" version="2.5.2" src="https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin" />
+  <plugin name="cordova-plugin-email-composer" version="0.8.3" src="https://github.com/katzer/cordova-plugin-email-composer" />
 </widget>

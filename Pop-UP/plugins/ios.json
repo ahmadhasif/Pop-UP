@@ -9,6 +9,12 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "io.cordova.myapp2afa5c"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "io.cordova.myapp2afa5c"
+        },
+        "cordova-plugin-email-composer": {
+            "PACKAGE_NAME": "io.cordova.myapp2afa5c"
         }
     },
     "dependent_plugins": {}
