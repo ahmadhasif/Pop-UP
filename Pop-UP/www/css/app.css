@@ -7,28 +7,42 @@
     height:50px; 
     width:50px
 }
-
 .nav-page{
     padding-left:0px; 
     padding-right:0px; 
     text-align:center;
 }
-
-.demo-head-panel{
-    padding:0;
-    height:140px;
+.panel-default{
+    height:100%;
 }
-
+.demo-head-panel{
+    height:70%;
+    padding:0;
+}
 .demo-body-panel{
-    font-size:15px;    
+    height:30%;
+    padding:5px;
+    padding-left:0;
+
+}
+.p-info{
+    width:70%;
     padding:5px;
     margin:0;
-    color:#1e1e1e;
 }
-
+.p-price{
+    width: 30%;
+    float: right;
+    margin: 0;
+    padding: 0;
+    margin-top: -18%;
+}
 .dummy{
     border-width:0;
     padding:3px;
     margin:5px;
     border-radius:5px;
+}
+#main-content, #img-property-slider{
+    padding:5px;
 }

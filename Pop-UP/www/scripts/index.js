@@ -10,19 +10,20 @@
     function onDeviceReady() {
         // Handle the Cordova pause and resume events
         document.addEventListener( 'pause', onPause.bind( this ), false );
-        document.addEventListener('resume', onResume.bind(this), false);
-        //cordova.plugins.email.isAvailable(
-        //    urischeme, function (isAvailable, withScheme) {
-        //        // alert('Service is not available') unless isAvailable;
-        //    });
-        
-        
+        document.addEventListener( 'resume', onResume.bind( this ), false );
         
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
-        datePicker();
-        apps();
-        //window.plugins.toast.show('This application is still in development state, use with cautious', 'short', 'center', function (a) { console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b) });
+        downloadxml();
         
+        //$("#req-form").validator().on("submit", function (event) {
+        //    if (event.isDefaultPrevented()) {
+        //        // handle the invalid form...
+        //    } else {
+        //        // everything looks good!
+        //        event.preventDefault();
+        //        formsubmit();
+        //    }
+        //});
     };
 
     function onPause() {
@@ -32,8 +33,4 @@
     function onResume() {
         // TODO: This application has been reactivated. Restore application state here.
     };
-
-    function onBackKeyDown(e) {
-        e.preventDefault();
-    }
 } )();
