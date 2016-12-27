@@ -34,8 +34,8 @@ function populate(xml) {
 
     //property list xml
     var l;
-    var pid, pimg1, pimg2, pimg3, pimg4, pimg5, pimg6, pimg7, pimg8, pimg9, pimg10, pname, plocation, pregion, pstate, ptype, pcapacity, pidf, pids, pidt,
-        psize, pmin, pday, pweek, preqW, preqM, pfon, pftw, pfth, pffr, pffv, pfsx,
+    var pid, pimg1, pimg2, pimg3, pimg4, pimg5, pimg6, pimg7, pimg8, pimg9, pimg10, pname, pcat, plocation, pregion, pstate, ptype, pcapacity, pidf, pids, pidt,
+        psize, pmin, pday, pweek, pmonth, preqW, preqM, pfon, pftw, pfth, pffr, pffv, pfsx,
         pfsv, pfei, pfnn, pftn, pdesc, pp1, pp2, pp3, pmap = "";
 
     var property = xmlDoc.getElementsByTagName("property");
@@ -54,6 +54,7 @@ function populate(xml) {
     var img9 = xmlDoc.getElementsByTagName("img9");
     var img10 = xmlDoc.getElementsByTagName("img10");
     var name = xmlDoc.getElementsByTagName("name");
+    var cat = xmlDoc.getElementsByTagName("cat");
     var location = xmlDoc.getElementsByTagName("location");
     var region = xmlDoc.getElementsByTagName("region");
     var state = xmlDoc.getElementsByTagName("state");
@@ -66,6 +67,7 @@ function populate(xml) {
     var min = xmlDoc.getElementsByTagName("min");
     var day = xmlDoc.getElementsByTagName("day");
     var week = xmlDoc.getElementsByTagName("week");
+    var month = xmlDoc.getElementsByTagName("month");
     var reqW = xmlDoc.getElementsByTagName("reqW");
     var reqM = xmlDoc.getElementsByTagName("reqM");
     var fon = xmlDoc.getElementsByTagName("fon");
@@ -97,6 +99,7 @@ function populate(xml) {
         pimg9 = img9[i].childNodes[0].nodeValue;
         pimg10 = img10[i].childNodes[0].nodeValue;
         pname = name[i].childNodes[0].nodeValue;
+        pcat = cat[i].childNodes[0].nodeValue;
         plocation = location[i].childNodes[0].nodeValue;
         pregion = region[i].childNodes[0].nodeValue;
         pstate = state[i].childNodes[0].nodeValue;
@@ -109,6 +112,7 @@ function populate(xml) {
         pmin = min[i].childNodes[0].nodeValue;
         pday = day[i].childNodes[0].nodeValue;
         pweek = week[i].childNodes[0].nodeValue;
+        pmonth = month[i].childNodes[0].nodeValue;
         preqW = reqW[i].childNodes[0].nodeValue;
         preqM = reqM[i].childNodes[0].nodeValue;
         pfon = fon[i].childNodes[0].nodeValue;
@@ -141,6 +145,7 @@ function populate(xml) {
         '" ,"img9":"' + pimg9 +
         '" ,"img10":"' + pimg10 +
         '" ,"name":"' + pname +
+        '" ,"cat":"' + pcat +
         '" ,"location":"' + plocation +
         '" ,"region":"' + pregion +
         '" ,"state":"' + pstate +
@@ -153,6 +158,7 @@ function populate(xml) {
         '" ,"min":"' + pmin +
         '" ,"day":"' + pday +
         '" ,"week":"' + pweek +
+        '" ,"month":"' + pmonth +
         '" ,"reqW":"' + preqW +
         '" ,"reqM":"' + preqM +
         '" ,"fon":"' + pfon +
@@ -202,19 +208,17 @@ function populateProperties(properties) {
     $content = $("#plist"); // ul
     var l;
     for (l = 0; l < properties.length; l++) {
-        var pType = obj.property[l].type;
+        var pCat = obj.property[l].cat;
         var pIcon = "";
 
         //setting up the icon
-        if (pType == "space") {
+        if (pCat == "space") {
             pIcon = "images/app-ic-2.png";
-        } else if (pType == "shop") {
+        } else if (pCat == "shop") {
             pIcon = "images/app-ic-1.png";
-        } else if (pType == "special") {
-            pIcon = "";
-        } else {
+        } else if (pCat == "special") {
             pIcon = "images/app-ic-3.png";
-        }
+        } 
 
 
         $content.append('<li class="demo ui-first-child ui-last-child" style="margin-top:10px; margin-bottom:10px; box-shadow:5px 5px 5px #888888">'

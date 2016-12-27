@@ -44,10 +44,11 @@ function formSend(property, propertyId) {
     var tel = $("#client-tel").val();
     var mail = $("#client-email").val();
 
-    var msgBody = 'You receive this e-mail because you have made a request from our Pop-UP application.<br/><br/><br/>'
+    var msgBody = 'Thank you for interested to rent our pop-up space<br/><br/><br/>'
+               + 'We will evaluate and feedback on your request within 24 hours..<br/><br/><br/>'
                + 'Details of Request:<br/>'
                + '==============================<br/><br/>'
-               + 'Property: ' + property + '<br/>'
+               + 'Space Name: ' + property + '<br/>'
                + 'ID: ' + propertyId + '<br/>'
                + 'Date: ' + dateFrom + '&nbsp; - ' + dateTo + '<br/><br/>'
                + 'Name: ' + cname
@@ -56,9 +57,12 @@ function formSend(property, propertyId) {
                + '<br/>Job Title: ' + job
                + '<br/>E-mail: ' + mail
                + '<br/>Phone: ' + tel + '<br/><br/>'
-               + 'If you require any assistance, please contact us at +603-7885 0606 or e-mail to our Customer Relations Division at support@JustSimple.com.my.<br/>'
-               + 'Our friendly and dedicated staff will provide all the technical support you need to have an effective web presence.<br/><br/>'
-               + 'Thank you and best regards.';
+               + 'If you require any assistance, please contact us at +603 7886 8868, or<br/>'
+               + 'e-mail to our Customer Relations Division at enquiry@pop-up.my<br/><br/>'
+               + 'Thank you and best regards.<br/><br/><br/>'
+               + 'POP-UP.MY<br/>'
+               + '- short-term retail space rental online -<br/><br/>'
+               + 'Interested to list your space, please register here: <a href="http://www.pop-up.my/register/">http://www.pop-up.my/register/</a>';
 
     $.ajax({
         type: "POST",

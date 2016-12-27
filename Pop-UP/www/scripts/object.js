@@ -5,8 +5,8 @@
     var index;
     var obj = JSON.parse(jArr);
     var cont = $("#");
-    var id, img1, img2, img3, img4, img5, name, location, region, state, type, capacity, idf, ids, idt,
-        size, min, day, week, reqW, reqM, fon, ftw, fth, ffr, ffv, fsx,
+    var id, img1, img2, img3, img4, img5, name, cat, location, region, state, type, capacity, idf, ids, idt,
+        size, min, day, week, month, reqW, reqM, fon, ftw, fth, ffr, ffv, fsx,
         fsv, fei, fnn, ftn, desc, p1, p2, p3, map = "";
 
     $(".demo").click(function () {
@@ -25,6 +25,7 @@
         img9 = obj.property[index].img9;
         img10 = obj.property[index].img10;
         name = obj.property[index].name;
+        cat = obj.property[index].cat;
         location = obj.property[index].location;
         region = obj.property[index].region;
         state = obj.property[index].state;
@@ -37,6 +38,7 @@
         min = obj.property[index].min;
         day = obj.property[index].day;
         week = obj.property[index].week;
+        month = obj.property[index].month;
         reqW = obj.property[index].reqW;
         reqM = obj.property[index].reqM;
         fon = obj.property[index].fon;
@@ -57,13 +59,13 @@
 
         $('#clear-content').remove();
 
-        showDetail(id, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, name, location, region, state, type, capacity, idf, ids, idt, size, min, day, week,
+        showDetail(id, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, name, cat, location, region, state, type, capacity, idf, ids, idt, size, min, day, week, month,
             reqW, reqM, fon, ftw, fth, ffr, ffv, fsx, fsv, fei, fnn, ftn, desc, p1, p2, p3, map);
     })
 }
 
 
-function showDetail(id, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, name, location, region, state, type, capacity, idf, ids, idt, size, min, day, week,
+function showDetail(id, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, name, cat, location, region, state, type, capacity, idf, ids, idt, size, min, day, week, month,
             reqW, reqM, fon, ftw, fth, ffr, ffv, fsx, fsv, fei, fnn, ftn, desc, p1, p2, p3, map) {
 
 
@@ -422,6 +424,23 @@ function showDetail(id, img1, img2, img3, img4, img5, img6, img7, img8, img9, im
     //                        + '<li class="active" data-slide-to="0" data-target="#article-photo-carousel"></li>'
     //                        + '<li class="" data-slide-to="1" data-target="#article-photo-carousel"></li>'
     //                    + '</ol>';
+
+    var ideal = "";
+    if (idf != "unset") {
+        if (ids != "unset") {
+            if (idt != "unset") {
+                ideal = '<li>' + idf + '</li>'
+                    + '<li>' + ids + '</li>'
+                    + '<li>' + idt + '</li>';
+            } else {
+                ideal = '<li>' + idf + '</li>' 
+                    + '<li>' + ids + '</li>';
+            }
+        } else {
+            ideal = '<li>' + idf + '</li>';
+        }
+    }
+
 
 
     $('#main-content').append('<div class="panel panel-default" id="clear-content">'
