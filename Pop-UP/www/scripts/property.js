@@ -7,7 +7,7 @@
             populate(this);
         } 
     };
-    xhttp.open("POST", "http://purple.com.my/popup/popup2.xml", true);
+    xhttp.open("POST", "http://purple.com.my/popup/popup.xml", true);
     xhttp.send();
 }
 
@@ -212,6 +212,8 @@ function populateProperties(properties) {
             pIcon = "images/app-ic-1.png";
         } else if (pType == "special") {
             pIcon = "";
+        } else {
+            pIcon = "images/app-ic-3.png";
         }
 
 
@@ -228,8 +230,8 @@ function populateProperties(properties) {
                                             + '<p style="padding-left:50px; margin-top:-5px">' + obj.property[l].location + ', ' + obj.property[l].region + '</p>'
                                         + '</div>'
                                         + '<div class="container p-price">'
-                                            + '<p href="" class="ui-btn dummy" style="background-color:#27f335; color:#fff; text-shadow:0 1px 0 #27f335">RM' + obj.property[l].day + ' / day</p>'
-                                            + '<p href="" class="ui-btn dummy" style="background-color:#24efec; color:#fff; text-shadow:0 1px 0 #24efec">RM' + obj.property[l].week + ' / week</p>'
+                                            + '<p href="" class="ui-btn dummy" style="background-color:#27f335; color:#fff; text-shadow:0 1px 0 #27f335">RM ' + obj.property[l].day + ' / day</p>'
+                                            + '<p href="" class="ui-btn dummy" style="background-color:#24efec; color:#fff; text-shadow:0 1px 0 #24efec">RM ' + obj.property[l].week + ' / week</p>'
                                         + '</div>'
                                     + '</div>'
                                 + '</div>'

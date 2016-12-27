@@ -20,10 +20,31 @@
 
         <!-- ****************************************************************************************** -->
 
-        <div data-role="page" id="init-page" class="">
+        <div data-role="page" id="starter">
+            <div data-role="main">
+                <div class="container" style="text-align:center; padding-top:20%">
+                    <img src="images/logo-popup.png" style="width:50%;"/>
+                </div>                
+            </div>
+
+            <div data-role="footer" data-position="fixed" style="border:none">
+                <div class="container" style="text-align:center;">
+                    <h3 class="blink">Checking pop-up version...</h3>
+                </div>
+            </div>            
+        </div>
+
+        <!-- ****************************************************************************************** -->
+
+        <div data-role="page" id="init-page">
             <div data-role="header">
                 <div class="container header-cont">
-                    <img src="images/logo-popup.png" class="img-header" />
+                    <a href="#about" data-rel="popup" data-position-to="window" data-transition="fade" ><img src="images/logo-popup.png" class="img-header" /></a>
+                </div>
+                <div data-role="popup" id="about" class="ui-content" data-overlay-theme="b" data-theme="b" data-corners="false">
+                    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                    <p>About Pop-Up.My</p>
+                    <img class="popphoto blink" src="images/logo-popup.png" style="max-width:150px;" alt="Pop-Up.my" />
                 </div>
             </div>
 
@@ -103,6 +124,11 @@
                             <iframe height="250" frameborder="0" style="border:0" src="" allowfullscreen></iframe>
                         </div>
                     </div>
+                </div>
+
+                <div class="panel panel-default" style="margin-top:10px">
+                    <div class="panel-heading"><strong>Descriptions</strong></div>
+                    <div class="panel-body" id="desc-panel"></div>
                 </div>
 
                 <div class="panel panel-default" style="margin-top:10px">
@@ -215,6 +241,7 @@
         <script type="text/javascript" src="scripts/bootstrap-datetimepicker.min.js"></script>
 
         <script type="text/javascript" src="scripts/index.js"></script>
+        <script type="text/javascript" src="scripts/ver.js"></script>
         <script type="text/javascript" src="scripts/property.js"></script>
         <script type="text/javascript" src="scripts/object.js"></script>
         <script type="text/javascript" src="scripts/form.js"></script>

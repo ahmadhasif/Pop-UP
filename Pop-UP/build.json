@@ -3,7 +3,7 @@
          "release": {
              "keystore": "C:\\popup.keystore",
              "storePassword": "pwd123",
-             "alias": "hasifT",
+             "alias": "adminJS",
              "password" : "pwd123",
              "keystoreType": ""
          }

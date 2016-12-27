@@ -62,7 +62,7 @@ function formSend(property, propertyId) {
 
     $.ajax({
         type: "POST",
-        url: "http://purple.com.my/appMail/mail/process.php",
+        url: "http://purple.com.my/popupapp/mail/process.php",
         data: "msgBody=" + encodeURIComponent(msgBody) + "&name=" + cname + "&email=" + encodeURIComponent(mail),
         success: function (text) {
             if (text == "success") {
@@ -77,5 +77,5 @@ function formSend(property, propertyId) {
 
 function formSuccess(){
     alert("message been sent");
-    window.location.href = 'index.html';
+    document.location.href = "index.html#init-page";
 }
