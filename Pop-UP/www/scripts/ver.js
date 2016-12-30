@@ -15,7 +15,7 @@
                 var c = confirm('Your Pop-Up version is outdated!\nPlease update to new version.');
                 if (c == true) {
                     console.log("ok");
-                    window.location.href = "http://purple.com.my/popupapp/popup-app/android-release.apk";
+                    window.location.href = "";
                 } else {
                     console.log("cancel");
                     window.close();

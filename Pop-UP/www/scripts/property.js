@@ -7,7 +7,7 @@
             populate(this);
         } 
     };
-    xhttp.open("POST", "http://purple.com.my/popup/popup.xml", true);
+    xhttp.open("POST", "", true);
     xhttp.send();
 }
 
@@ -34,9 +34,12 @@ function populate(xml) {
 
     //property list xml
     var l;
-    var pid, pimg1, pimg2, pimg3, pimg4, pimg5, pimg6, pimg7, pimg8, pimg9, pimg10, pname, pcat, plocation, pregion, pstate, ptype, pcapacity, pidf, pids, pidt,
-        psize, pmin, pday, pweek, pmonth, preqW, preqM, pfon, pftw, pfth, pffr, pffv, pfsx,
-        pfsv, pfei, pfnn, pftn, pdesc, pp1, pp2, pp3, pmap = "";
+    var pid, pimg1, pimg2, pimg3, pimg4, pimg5, pimg6, pimg7, pimg8, pimg9, pimg10,
+        pname, pcat, plocation, pregion, pstate, ptype, pcapacity,
+        pideal1, pideal2, pideal3, pideal4, pideal5, pideal6, pideal7, pideal8, pideal9, pideal10, 
+        psize, pmin, pday, pweek, pmonth, prdesc, //descide new var name for pricing descriptions.
+        pfeat1, pfeat2, pfeat3, pfeat4, pfeat5, pfeat6, pfeat7, pfeat8, pfeat9, pfeat10, pfeat11, pfeat12, pfeat13, pfeat14, pfeat15, pfeat16, pfeat17, pfeat18,
+        pdesc, pp1, pp2, pp3, pmap = "";
 
     var property = xmlDoc.getElementsByTagName("property");
 
@@ -53,6 +56,7 @@ function populate(xml) {
     var img8 = xmlDoc.getElementsByTagName("img8");
     var img9 = xmlDoc.getElementsByTagName("img9");
     var img10 = xmlDoc.getElementsByTagName("img10");
+
     var name = xmlDoc.getElementsByTagName("name");
     var cat = xmlDoc.getElementsByTagName("cat");
     var location = xmlDoc.getElementsByTagName("location");
@@ -60,26 +64,47 @@ function populate(xml) {
     var state = xmlDoc.getElementsByTagName("state");
     var type = xmlDoc.getElementsByTagName("type");
     var capacity = xmlDoc.getElementsByTagName("capacity");
-    var idf = xmlDoc.getElementsByTagName("idf");
-    var ids = xmlDoc.getElementsByTagName("ids");
-    var idt = xmlDoc.getElementsByTagName("idt");
+
+    var ideal1 = xmlDoc.getElementsByTagName("ideal1");
+    var ideal2 = xmlDoc.getElementsByTagName("ideal2");
+    var ideal3 = xmlDoc.getElementsByTagName("ideal3");
+    var ideal4 = xmlDoc.getElementsByTagName("ideal4");
+    var ideal5 = xmlDoc.getElementsByTagName("ideal5");
+    var ideal6 = xmlDoc.getElementsByTagName("ideal6");
+    var ideal7 = xmlDoc.getElementsByTagName("ideal7");
+    var ideal8 = xmlDoc.getElementsByTagName("ideal8");
+    var ideal9 = xmlDoc.getElementsByTagName("ideal9");
+    var ideal10 = xmlDoc.getElementsByTagName("ideal10");
+    
+    //add ideal++
+
     var size = xmlDoc.getElementsByTagName("size");
     var min = xmlDoc.getElementsByTagName("min");
     var day = xmlDoc.getElementsByTagName("day");
     var week = xmlDoc.getElementsByTagName("week");
     var month = xmlDoc.getElementsByTagName("month");
-    var reqW = xmlDoc.getElementsByTagName("reqW");
-    var reqM = xmlDoc.getElementsByTagName("reqM");
-    var fon = xmlDoc.getElementsByTagName("fon");
-    var ftw = xmlDoc.getElementsByTagName("ftw");
-    var fth = xmlDoc.getElementsByTagName("fth");
-    var ffr = xmlDoc.getElementsByTagName("ffr");
-    var ffv = xmlDoc.getElementsByTagName("ffv");
-    var fsx = xmlDoc.getElementsByTagName("fsx");
-    var fsv = xmlDoc.getElementsByTagName("fsv");
-    var fei = xmlDoc.getElementsByTagName("fei");
-    var fnn = xmlDoc.getElementsByTagName("fnn");
-    var ftn = xmlDoc.getElementsByTagName("ftn");
+   //add pricing desc 
+
+    //add features++
+    var feat1 = xmlDoc.getElementsByTagName("feat1");
+    var feat2 = xmlDoc.getElementsByTagName("feat2");
+    var feat3 = xmlDoc.getElementsByTagName("feat3");
+    var feat4 = xmlDoc.getElementsByTagName("feat4");
+    var feat5 = xmlDoc.getElementsByTagName("feat5");
+    var feat6 = xmlDoc.getElementsByTagName("feat6");
+    var feat7 = xmlDoc.getElementsByTagName("feat7");
+    var feat8 = xmlDoc.getElementsByTagName("feat8");
+    var feat9 = xmlDoc.getElementsByTagName("feat9");
+    var feat10 = xmlDoc.getElementsByTagName("feat10");
+    var feat11 = xmlDoc.getElementsByTagName("feat11");
+    var feat12 = xmlDoc.getElementsByTagName("feat12");
+    var feat13 = xmlDoc.getElementsByTagName("feat13");
+    var feat14 = xmlDoc.getElementsByTagName("feat14");
+    var feat15 = xmlDoc.getElementsByTagName("feat15");
+    var feat16 = xmlDoc.getElementsByTagName("feat16");
+    var feat17 = xmlDoc.getElementsByTagName("feat17");
+    var feat18 = xmlDoc.getElementsByTagName("feat18");
+
     var desc = xmlDoc.getElementsByTagName("desc");
     var p1 = xmlDoc.getElementsByTagName("p1");
     var p2 = xmlDoc.getElementsByTagName("p2");
@@ -98,6 +123,7 @@ function populate(xml) {
         pimg8 = img8[i].childNodes[0].nodeValue;
         pimg9 = img9[i].childNodes[0].nodeValue;
         pimg10 = img10[i].childNodes[0].nodeValue;
+
         pname = name[i].childNodes[0].nodeValue;
         pcat = cat[i].childNodes[0].nodeValue;
         plocation = location[i].childNodes[0].nodeValue;
@@ -105,26 +131,46 @@ function populate(xml) {
         pstate = state[i].childNodes[0].nodeValue;
         ptype = type[i].childNodes[0].nodeValue;
         pcapacity = capacity[i].childNodes[0].nodeValue;
-        pidf = idf[i].childNodes[0].nodeValue;
-        pids = ids[i].childNodes[0].nodeValue;
-        pidt = idt[i].childNodes[0].nodeValue;
+
+        //add ideal++
+        pideal1 = ideal1[i].childNodes[0].nodeValue;
+        pideal2 = ideal2[i].childNodes[0].nodeValue;
+        pideal3 = ideal3[i].childNodes[0].nodeValue;
+        pideal4 = ideal4[i].childNodes[0].nodeValue;
+        pideal5 = ideal5[i].childNodes[0].nodeValue;
+        pideal6 = ideal6[i].childNodes[0].nodeValue;
+        pideal7 = ideal7[i].childNodes[0].nodeValue;
+        pideal8 = ideal8[i].childNodes[0].nodeValue;
+        pideal9 = ideal9[i].childNodes[0].nodeValue;
+        pideal10 = ideal10[i].childNodes[0].nodeValue;        
+
         psize = size[i].childNodes[0].nodeValue;
         pmin = min[i].childNodes[0].nodeValue;
         pday = day[i].childNodes[0].nodeValue;
         pweek = week[i].childNodes[0].nodeValue;
         pmonth = month[i].childNodes[0].nodeValue;
-        preqW = reqW[i].childNodes[0].nodeValue;
-        preqM = reqM[i].childNodes[0].nodeValue;
-        pfon = fon[i].childNodes[0].nodeValue;
-        pftw = ftw[i].childNodes[0].nodeValue;
-        pfth = fth[i].childNodes[0].nodeValue;
-        pffr = ffr[i].childNodes[0].nodeValue;
-        pffv = ffv[i].childNodes[0].nodeValue;
-        pfsx = fsx[i].childNodes[0].nodeValue;
-        pfsv = fsv[i].childNodes[0].nodeValue;
-        pfei = fei[i].childNodes[0].nodeValue;
-        pfnn = fnn[i].childNodes[0].nodeValue;
-        pftn = ftn[i].childNodes[0].nodeValue;
+        //add pricing desc
+
+        //add features++
+        pfeat1 = feat1[i].childNodes[0].nodeValue;
+        pfeat2 = feat2[i].childNodes[0].nodeValue;
+        pfeat3 = feat3[i].childNodes[0].nodeValue;
+        pfeat4 = feat4[i].childNodes[0].nodeValue;
+        pfeat5 = feat5[i].childNodes[0].nodeValue;
+        pfeat6 = feat6[i].childNodes[0].nodeValue;
+        pfeat7 = feat7[i].childNodes[0].nodeValue;
+        pfeat8 = feat8[i].childNodes[0].nodeValue;
+        pfeat9 = feat9[i].childNodes[0].nodeValue;
+        pfeat10 = feat10[i].childNodes[0].nodeValue;
+        pfeat11 = feat11[i].childNodes[0].nodeValue;
+        pfeat12 = feat12[i].childNodes[0].nodeValue;
+        pfeat13 = feat13[i].childNodes[0].nodeValue;
+        pfeat14 = feat14[i].childNodes[0].nodeValue;
+        pfeat15 = feat15[i].childNodes[0].nodeValue;
+        pfeat16 = feat16[i].childNodes[0].nodeValue;
+        pfeat17 = feat17[i].childNodes[0].nodeValue;
+        pfeat18 = feat18[i].childNodes[0].nodeValue;
+
         pdesc = desc[i].childNodes[0].nodeValue;
         pp1 = p1[i].childNodes[0].nodeValue;
         pp2 = p2[i].childNodes[0].nodeValue;
@@ -151,26 +197,46 @@ function populate(xml) {
         '" ,"state":"' + pstate +
         '" ,"type":"' + ptype +
         '" ,"capacity":"' + pcapacity +
-        '" ,"idf" :"' + pidf +
-        '" ,"ids":"' + pids +
-        '" ,"idt":"' + pidt +
+
+        //add ideal++
+        '" ,"ideal1":"' + pideal1 +
+        '" ,"ideal2":"' + pideal2 +
+        '" ,"ideal3":"' + pideal3 +
+        '" ,"ideal4":"' + pideal4 +
+        '" ,"ideal5":"' + pideal5 +
+        '" ,"ideal6":"' + pideal6 +
+        '" ,"ideal7":"' + pideal7 +
+        '" ,"ideal8":"' + pideal8 +
+        '" ,"ideal9":"' + pideal9 +
+        '" ,"ideal10":"' + pideal10 +
+        
+
         '" ,"size":"' + psize +
         '" ,"min":"' + pmin +
         '" ,"day":"' + pday +
         '" ,"week":"' + pweek +
         '" ,"month":"' + pmonth +
-        '" ,"reqW":"' + preqW +
-        '" ,"reqM":"' + preqM +
-        '" ,"fon":"' + pfon +
-        '" ,"ftw":"' + pftw +
-        '" ,"fth":"' + pfth +
-        '" ,"ffr":"' + pffr +
-        '" ,"ffv":"' + pffv +
-        '" ,"fsx":"' + pfsx +
-        '" ,"fsv":"' + pfsv +
-        '" ,"fei":"' + pfei +
-        '" ,"fnn":"' + pfnn +
-        '" ,"ftn":"' + pftn +
+
+        //add pricingdesc & feat++
+        '" ,"feat1":"' + pfeat1 +
+        '" ,"feat2":"' + pfeat2 +
+        '" ,"feat3":"' + pfeat3 +
+        '" ,"feat4":"' + pfeat4 +
+        '" ,"feat5":"' + pfeat5 +
+        '" ,"feat6":"' + pfeat6 +
+        '" ,"feat7":"' + pfeat7 +
+        '" ,"feat8":"' + pfeat8 +
+        '" ,"feat9":"' + pfeat9 +
+        '" ,"feat10":"' + pfeat10 +
+        '" ,"feat11":"' + pfeat11 +
+        '" ,"feat12":"' + pfeat12 +
+        '" ,"feat13":"' + pfeat13 +
+        '" ,"feat14":"' + pfeat14 +
+        '" ,"feat15":"' + pfeat15 +
+        '" ,"feat16":"' + pfeat16 +
+        '" ,"feat17":"' + pfeat17 +
+        '" ,"feat18":"' + pfeat18 +
+
         '" ,"desc":"' + pdesc +
         '" ,"p1":"' + pp1 +
         '" ,"p2":"' + pp2 +
@@ -235,50 +301,11 @@ function populateProperties(properties) {
                                         + '</div>'
                                         + '<div class="container p-price">'
                                             + '<p href="" class="ui-btn dummy" style="background-color:#27f335; color:#fff; text-shadow:0 1px 0 #27f335">RM ' + obj.property[l].day + ' / day</p>'
-                                            + '<p href="" class="ui-btn dummy" style="background-color:#24efec; color:#fff; text-shadow:0 1px 0 #24efec">RM ' + obj.property[l].week + ' / week</p>'
                                         + '</div>'
                                     + '</div>'
                                 + '</div>'
                             + '</a>'
                         + '</li>');
-
-
-        /*ios styling version*/
-        //$content.append('<li class="demo ui-first-child ui-last-child" style="margin-top:10px; margin-bottom:10px; box-shadow:5px 5px 5px #888888">' +
-        //                '<a href="#info-page" class="ui-btn" style="height:200px; background-color:white; border-color:#ddd">' +
-        //                    '<div class="property-img" style="margin-left: -20px; margin-top: -20px; width: 360px; height:150px; overflow:hidden">' +
-        //                        '<img src="' + obj.property[l].img1 + '" style="width:100%; height:100%"/>' +
-        //                    '</div>' +
-        //                    '<div class="container property-info" style="margin-left:-33px; height: 50px; width: 330px; color:black">' + 
-        //                        '<img src="' + pIcon + '" style="width:40px" />' + 
-        //                        '<h2 style="padding-left:40px; margin-top:-33px">' + obj.property[l].name + '</h2>' + 
-        //                        '<p style="padding-left:40px; margin-top:-5px">' + obj.property[l].location + ', ' + obj.property[l].region + '</p>' + 
-        //                        '<p href="" class="ui-btn" style="margin-top:-40px; margin-left:215px; height:20px; width:80px; font-size:9px; color: #fff; background-color: #29cedc;' +
-        //                        'border-color: #ddd; text-shadow: 0 1px 0 #29cedc; border-radius: 4px;">RM ' + obj.property[l].day + ' / day</p>' + 
-        //                        '<p href="" class="ui-btn" style="margin-top:0px; margin-left:208px; height:20px; width:86px; font-size:9px; color: #fff; background-color: #17a548;' +
-        //                        'border-color: #ddd; text-shadow: 0 1px 0 #17a548; border-radius: 4px;">RM ' + obj.property[l].week + ' / week</p>' + 
-        //                    '</div>' +
-        //                '</a>' +
-        //            '</li>');
-
-        /*android styling version*/
-        //$content.append('<li class="demo ui-first-child ui-last-child" style="margin-top:10px; margin-bottom:10px; box-shadow:5px 5px 5px #888888">' +
-        //                '<a href="#info-page" class="ui-btn" style="height:200px; background-color:white; border-color:#ddd">' +
-        //                    '<div class="property-img" style="margin-left: -20px; margin-top: -20px; width: 360px; height:150px; overflow:hidden">' +
-        //                        '<img src="' + obj.property[l].img1 + '" style="width:100%; height:100%"/>' +
-        //                    '</div>' +
-        //                    '<div class="container property-info" style="margin-left:-33px; height: 50px; width: 330px; color:black">' + 
-        //                        '<img src="' + pIcon + '" style="width:50px; margin-top:-20px" />' + 
-        //                        '<h2 style="padding-left:50px; margin-top:-25px"">' + obj.property[l].name + '</h2>' + 
-        //                        '<p style="padding-left:50px; margin-top:-5px">' + obj.property[l].location + ', ' + obj.property[l].region + '</p>' + 
-        //                        '<p href="" class="ui-btn" style="margin-top:-40px; margin-left:235px; height:20px; width:90px; font-size:9px; color: #fff; background-color: #29cedc;' +
-        //                        'border-color: #ddd; text-shadow: 0 1px 0 #29cedc; border-radius: 4px;">RM ' + obj.property[l].day + ' / day</p>' + 
-        //                        '<p href="" class="ui-btn" style="margin-top:0px; margin-left:235px; height:20px; width:90px; font-size:9px; color: #fff; background-color: #17a548;' +
-        //                        'border-color: #ddd; text-shadow: 0 1px 0 #17a548; border-radius: 4px;">RM ' + obj.property[l].week + ' / week</p>' + 
-        //                    '</div>' +
-        //                '</a>' +
-        //            '</li>');
-
     }
 
     pObj(jArr);
