@@ -7,7 +7,7 @@
             populate(this);
         } 
     };
-    xhttp.open("POST", "", true);
+    xhttp.open("POST", "http://medicalsupplies.my/test/popup.xml", true);
     xhttp.send();
 }
 

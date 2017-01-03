@@ -5,7 +5,7 @@
 
     $.ajax({
         type: "POST",
-        url: "http://purple.com.my/popupapp/update.php",
+        url: "http://pop-up.my/popupapp/update.php",
         data: "ver=" + ver,
         success: function (text) {
             if (text == "updated") {
@@ -15,10 +15,10 @@
                 var c = confirm('Your Pop-Up version is outdated!\nPlease update to new version.');
                 if (c == true) {
                     console.log("ok");
-                    window.location.href = "";
+                    window.location.href = "http://pop-up.my/popupapp/popup-app/android-release.apk";
                 } else {
                     console.log("cancel");
-                    window.close();
+                    navigator.app.exitApp();
                 }
                 
             }

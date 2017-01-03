@@ -66,7 +66,7 @@ function formSend(property, propertyId) {
 
     $.ajax({
         type: "POST",
-        url: "",
+        url: "http://pop-up.my/popupapp/mail/process.php",
         data: "msgBody=" + encodeURIComponent(msgBody) + "&name=" + cname + "&email=" + encodeURIComponent(mail),
         success: function (text) {
             if (text == "success") {
